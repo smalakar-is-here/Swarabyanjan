@@ -4,7 +4,7 @@
 
 > **A robust data engineering pipeline to aggregate, clean, and optimize over 30GB of Bangla news data into a unified Parquet corpus.**
 
-[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Download%20Dataset-blue?style=for-the-badge&logo=kaggle)](https://www.kaggle.com/datasets/swagotammalakar/swarabyanjan-grand-corpus/)
+[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-Download%20Dataset-blue?style=for-the-badge&logo=kaggle)](https://kaggle.com/datasets/a6ec6016d092007de80f8969076212c4aa90393dceb8e3ac19993e9335f24b8c)
 
 ## 📖 Overview
 **Swarabyanjan** is an initiative to solve the data scarcity problem for Bengali Large Language Models (LLMs). This repository contains the preprocessing logic used to create the **Swarabyanjan Grand Corpus**.
@@ -13,7 +13,7 @@ We aggregated raw data from 8+ scattered sources (CSV, JSON, JSONL), cleaned the
 
 ## 📂 Dataset Link
 The processed dataset is hosted on Kaggle due to size constraints.
-👉 **[Download Swarabyanjan Grand Corpus Here](https://www.kaggle.com/datasets/swagotammalakar/swarabyanjan-grand-corpus/)**
+👉 **[Download Swarabyanjan Grand Corpus Here](https://kaggle.com/datasets/a6ec6016d092007de80f8969076212c4aa90393dceb8e3ac19993e9335f24b8c)**
 
 ## 🏗️ Pipeline Architecture
 
