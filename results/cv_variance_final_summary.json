@@ -1,0 +1,183 @@
+{
+  "n_seeds": 5,
+  "seeds": [
+    42,
+    123,
+    2024,
+    7,
+    99
+  ],
+  "n_folds_per_seed": 5,
+  "per_model_results": {
+    "BanglaBERT": {
+      "per_seed_f1": [
+        0.8795,
+        0.8795,
+        0.8795,
+        0.8795,
+        0.8795
+      ],
+      "per_seed_f1_by_seed": {
+        "42": 0.8795,
+        "123": 0.8795,
+        "2024": 0.8795,
+        "7": 0.8795,
+        "99": 0.8795
+      },
+      "per_seed_per_fold_f1": {
+        "42": null,
+        "123": null,
+        "2024": null,
+        "7": null,
+        "99": null
+      },
+      "per_seed_detail": {
+        "42": null,
+        "123": null,
+        "2024": null,
+        "7": null,
+        "99": null
+      },
+      "mean": 0.8795,
+      "std": null,
+      "source": "NOT COMPUTED — NB15b1/b2/b3 not run; single-seed fallback from NB1",
+      "n_seeds_completed": 1,
+      "per_seed_source": {
+        "42": "NB1 fallback",
+        "123": "NB1 fallback",
+        "2024": "NB1 fallback",
+        "7": "NB1 fallback",
+        "99": "NB1 fallback"
+      },
+      "batches_found": [],
+      "batches_missing": [
+        "b1",
+        "b2",
+        "b3"
+      ]
+    },
+    "SMI": {
+      "per_seed_f1": [
+        0.8091324325306019,
+        0.8070980011708848,
+        0.800776600873611,
+        0.8144009936573537,
+        0.8089523464020107
+      ],
+      "mean": 0.8080720749268924,
+      "std": 0.004384682651200209,
+      "source": "NB15a"
+    },
+    "Random Forest": {
+      "per_seed_f1": [
+        0.7697709890958299,
+        0.7920479434794989,
+        0.7848419763467701,
+        0.7687263164263449,
+        0.7802483220276877
+      ],
+      "mean": 0.7791271094752263,
+      "std": 0.008905933493044398,
+      "source": "NB15a"
+    },
+    "Logistic Regression": {
+      "per_seed_f1": [
+        0.7794373972318113,
+        0.7876107677023387,
+        0.7796031376144188,
+        0.7876810581328235,
+        0.7742086535018865
+      ],
+      "mean": 0.7817082028366558,
+      "std": 0.00522199904810518,
+      "source": "NB15a"
+    },
+    "Linear SVM": {
+      "per_seed_f1": [
+        0.770367682123583,
+        0.7803612310674521,
+        0.7676100416455859,
+        0.7804458356509684,
+        0.775538549436509
+      ],
+      "mean": 0.7748646679848197,
+      "std": 0.005189763763564199,
+      "source": "NB15a"
+    },
+    "XGBoost": {
+      "per_seed_f1": [
+        0.7548920817002983,
+        0.7473104609066599,
+        0.722192594703769,
+        0.7416571768870013,
+        0.727113656076474
+      ],
+      "mean": 0.7386331940548405,
+      "std": 0.012262005724284982,
+      "source": "NB15a"
+    }
+  },
+  "banglabert_batch_summary": {
+    "batches_found": [],
+    "batches_missing": [
+      "b1",
+      "b2",
+      "b3"
+    ],
+    "per_seed_source": {
+      "42": "NB1 fallback",
+      "123": "NB1 fallback",
+      "2024": "NB1 fallback",
+      "7": "NB1 fallback",
+      "99": "NB1 fallback"
+    },
+    "source_label": "NB1 single-seed (all batches missing)",
+    "n_real_seeds": 1,
+    "batch_files": {
+      "b1": "cv_variance_banglabert_b1_results.json",
+      "b2": "cv_variance_banglabert_b2_results.json",
+      "b3": "cv_variance_banglabert_b3_results.json"
+    },
+    "batch_seeds": {
+      "b1": [
+        42,
+        123
+      ],
+      "b2": [
+        2024,
+        7
+      ],
+      "b3": [
+        99
+      ]
+    }
+  },
+  "single_seed_reference_f1": {
+    "BanglaBERT": 0.8795,
+    "SMI": 0.8091,
+    "Random Forest": 0.7879,
+    "Logistic Regression": 0.7771,
+    "Linear SVM": 0.7636,
+    "XGBoost": 0.7524
+  },
+  "key_findings": [
+    "BanglaBERT: across-seed variance was NOT measured (NB15b1/b2/b3 not run). Single-seed F1=0.8795 from NB1 is used as reference only.",
+    "SMI: across-seed F1 = 0.8081 \u00b1 0.0044 (single-seed value 0.8091 is representative).",
+    "Random Forest: across-seed F1 = 0.7791 \u00b1 0.0089 (single-seed value 0.7879 is representative).",
+    "Logistic Regression: across-seed F1 = 0.7817 \u00b1 0.0052 (single-seed value 0.7771 is representative).",
+    "Linear SVM: across-seed F1 = 0.7749 \u00b1 0.0052 (single-seed value 0.7636 is an outlier).",
+    "XGBoost: across-seed F1 = 0.7386 \u00b1 0.0123 (single-seed value 0.7524 is an outlier).",
+    "Highest across-seed variance: XGBoost (std=0.0123).",
+    "Mean ranking across seeds (high \u2192 low): BanglaBERT (0.8795), SMI (0.8081), Logistic Regression (0.7817), Random Forest (0.7791), Linear SVM (0.7749), XGBoost (0.7386)",
+    "BanglaBERT batches found: []; missing: ['b1', 'b2', 'b3']. Source label: 'NB1 single-seed (all batches missing)'."
+  ],
+  "note": "Part 3/3: Aggregator. Combines NB15a (SMI + classical) + NB15b1/b2/b3 (BanglaBERT, 3 batches). If any NB15b batch is missing, falls back to NB1 single-seed F1=0.8831 for the seeds in that batch.",
+  "sources": {
+    "NB15a_path": "/kaggle/input/notebooks/swagotammalakar/nb15a-cv-variance-smi-classical/cv_variance_smi_classical_results.json",
+    "NB15b1_path": null,
+    "NB15b2_path": null,
+    "NB15b3_path": null,
+    "banglabert_source": "NB1 single-seed (all batches missing)"
+  },
+  "created_by": "NB15c_CV_Variance_Aggregate.ipynb"
+}

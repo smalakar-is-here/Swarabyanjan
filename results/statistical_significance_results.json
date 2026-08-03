@@ -1,0 +1,633 @@
+{
+  "notebook": "NB13_Statistical_Significance_Tests.ipynb",
+  "purpose": "Pairwise statistical significance tests between all models in the Swarabyanjan benchmark.",
+  "tests_implemented": [
+    "McNemar (exact, statsmodels.stats.contingency_tables.mcnemar)",
+    "Bootstrap 95% CI for F1 (10 000 iterations, random_state=42)",
+    "Bootstrap 95% CI for pairwise F1 differences (paired resampling)",
+    "Wilcoxon signed-rank test (scipy.stats.wilcoxon, per-fold F1)",
+    "One-sample t-test (scipy.stats.ttest_1samp, LLM multi-seed vs baselines)"
+  ],
+  "configuration": {
+    "seed": 42,
+    "n_bootstrap": 10000,
+    "n_folds": 5,
+    "n_articles": 766,
+    "n_models_compared": 6,
+    "model_names": [
+      "LogReg",
+      "RandomForest",
+      "LinearSVM",
+      "XGBoost",
+      "SMI",
+      "BanglaBERT"
+    ]
+  },
+  "banglabert_predictions_source": "loaded_from_csv",
+  "mcnemar_tests": [
+    {
+      "model_a": "LogReg",
+      "model_b": "RandomForest",
+      "n_both_correct": 560,
+      "n_a_correct_b_wrong": 40,
+      "n_a_wrong_b_correct": 44,
+      "n_both_wrong": 122,
+      "discordant_pairs": 84,
+      "statistic": 40.0,
+      "p_value": 0.7436441861052044,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "LinearSVM",
+      "n_both_correct": 573,
+      "n_a_correct_b_wrong": 27,
+      "n_a_wrong_b_correct": 15,
+      "n_both_wrong": 151,
+      "discordant_pairs": 42,
+      "statistic": 15.0,
+      "p_value": 0.08842954698775429,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "XGBoost",
+      "n_both_correct": 523,
+      "n_a_correct_b_wrong": 77,
+      "n_a_wrong_b_correct": 54,
+      "n_both_wrong": 112,
+      "discordant_pairs": 131,
+      "statistic": 54.0,
+      "p_value": 0.05417080038723309,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "SMI",
+      "n_both_correct": 528,
+      "n_a_correct_b_wrong": 72,
+      "n_a_wrong_b_correct": 101,
+      "n_both_wrong": 65,
+      "discordant_pairs": 173,
+      "statistic": 72.0,
+      "p_value": 0.032969756410882456,
+      "significant": true,
+      "interpretation": "Significant (p<0.05)"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "BanglaBERT",
+      "n_both_correct": 571,
+      "n_a_correct_b_wrong": 29,
+      "n_a_wrong_b_correct": 103,
+      "n_both_wrong": 63,
+      "discordant_pairs": 132,
+      "statistic": 29.0,
+      "p_value": 6.465338130990345e-11,
+      "significant": true,
+      "interpretation": "Significant (p<0.001)"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "LinearSVM",
+      "n_both_correct": 542,
+      "n_a_correct_b_wrong": 62,
+      "n_a_wrong_b_correct": 46,
+      "n_both_wrong": 116,
+      "discordant_pairs": 108,
+      "statistic": 46.0,
+      "p_value": 0.14857634761056238,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "XGBoost",
+      "n_both_correct": 535,
+      "n_a_correct_b_wrong": 69,
+      "n_a_wrong_b_correct": 42,
+      "n_both_wrong": 120,
+      "discordant_pairs": 111,
+      "statistic": 42.0,
+      "p_value": 0.013233607758826291,
+      "significant": true,
+      "interpretation": "Significant (p<0.05)"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "SMI",
+      "n_both_correct": 523,
+      "n_a_correct_b_wrong": 81,
+      "n_a_wrong_b_correct": 106,
+      "n_both_wrong": 56,
+      "discordant_pairs": 187,
+      "statistic": 81.0,
+      "p_value": 0.07897134041071459,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "BanglaBERT",
+      "n_both_correct": 579,
+      "n_a_correct_b_wrong": 25,
+      "n_a_wrong_b_correct": 95,
+      "n_both_wrong": 67,
+      "discordant_pairs": 120,
+      "statistic": 25.0,
+      "p_value": 8.443958194827311e-11,
+      "significant": true,
+      "interpretation": "Significant (p<0.001)"
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "XGBoost",
+      "n_both_correct": 515,
+      "n_a_correct_b_wrong": 73,
+      "n_a_wrong_b_correct": 62,
+      "n_both_wrong": 116,
+      "discordant_pairs": 135,
+      "statistic": 62.0,
+      "p_value": 0.3895026289761408,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)"
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "SMI",
+      "n_both_correct": 515,
+      "n_a_correct_b_wrong": 73,
+      "n_a_wrong_b_correct": 114,
+      "n_both_wrong": 64,
+      "discordant_pairs": 187,
+      "statistic": 73.0,
+      "p_value": 0.0033343818618073195,
+      "significant": true,
+      "interpretation": "Significant (p<0.05)"
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "BanglaBERT",
+      "n_both_correct": 561,
+      "n_a_correct_b_wrong": 27,
+      "n_a_wrong_b_correct": 113,
+      "n_both_wrong": 65,
+      "discordant_pairs": 140,
+      "statistic": 27.0,
+      "p_value": 1.0374925647730655e-13,
+      "significant": true,
+      "interpretation": "Significant (p<0.001)"
+    },
+    {
+      "model_a": "XGBoost",
+      "model_b": "SMI",
+      "n_both_correct": 496,
+      "n_a_correct_b_wrong": 81,
+      "n_a_wrong_b_correct": 133,
+      "n_both_wrong": 56,
+      "discordant_pairs": 214,
+      "statistic": 81.0,
+      "p_value": 0.00046221498041568886,
+      "significant": true,
+      "interpretation": "Significant (p<0.001)"
+    },
+    {
+      "model_a": "XGBoost",
+      "model_b": "BanglaBERT",
+      "n_both_correct": 550,
+      "n_a_correct_b_wrong": 27,
+      "n_a_wrong_b_correct": 124,
+      "n_both_wrong": 65,
+      "discordant_pairs": 151,
+      "statistic": 27.0,
+      "p_value": 4.685813768279812e-16,
+      "significant": true,
+      "interpretation": "Significant (p<0.001)"
+    },
+    {
+      "model_a": "SMI",
+      "model_b": "BanglaBERT",
+      "n_both_correct": 585,
+      "n_a_correct_b_wrong": 44,
+      "n_a_wrong_b_correct": 89,
+      "n_both_wrong": 48,
+      "discordant_pairs": 133,
+      "statistic": 44.0,
+      "p_value": 0.00011857946685526096,
+      "significant": true,
+      "interpretation": "Significant (p<0.001)"
+    }
+  ],
+  "bootstrap_ci": [
+    {
+      "model": "LogReg",
+      "f1_point": 0.7793,
+      "f1_ci_low": 0.7458,
+      "f1_ci_high": 0.8111,
+      "f1_ci_width": 0.0653
+    },
+    {
+      "model": "RandomForest",
+      "f1_point": 0.7885,
+      "f1_ci_low": 0.7562,
+      "f1_ci_high": 0.8189,
+      "f1_ci_width": 0.0627
+    },
+    {
+      "model": "LinearSVM",
+      "f1_point": 0.7652,
+      "f1_ci_low": 0.7311,
+      "f1_ci_high": 0.7974,
+      "f1_ci_width": 0.0664
+    },
+    {
+      "model": "XGBoost",
+      "f1_point": 0.751,
+      "f1_ci_low": 0.7155,
+      "f1_ci_high": 0.7849,
+      "f1_ci_width": 0.0694
+    },
+    {
+      "model": "SMI",
+      "f1_point": 0.8121,
+      "f1_ci_low": 0.7798,
+      "f1_ci_high": 0.8422,
+      "f1_ci_width": 0.0625
+    },
+    {
+      "model": "BanglaBERT",
+      "f1_point": 0.8827,
+      "f1_ci_low": 0.8583,
+      "f1_ci_high": 0.906,
+      "f1_ci_width": 0.0477
+    }
+  ],
+  "bootstrap_pairwise_differences": [
+    {
+      "model_a": "LogReg",
+      "model_b": "RandomForest",
+      "f1_delta_point": -0.0093,
+      "f1_delta_ci_low": -0.0344,
+      "f1_delta_ci_high": 0.0151,
+      "significant": false,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "LinearSVM",
+      "f1_delta_point": 0.0141,
+      "f1_delta_ci_low": -0.0034,
+      "f1_delta_ci_high": 0.0323,
+      "significant": false,
+      "direction": "A>B"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "XGBoost",
+      "f1_delta_point": 0.0283,
+      "f1_delta_ci_low": -0.0032,
+      "f1_delta_ci_high": 0.0588,
+      "significant": false,
+      "direction": "A>B"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "SMI",
+      "f1_delta_point": -0.0328,
+      "f1_delta_ci_low": -0.0702,
+      "f1_delta_ci_high": 0.0037,
+      "significant": false,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "BanglaBERT",
+      "f1_delta_point": -0.1034,
+      "f1_delta_ci_low": -0.1354,
+      "f1_delta_ci_high": -0.0728,
+      "significant": true,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "LinearSVM",
+      "f1_delta_point": 0.0233,
+      "f1_delta_ci_low": -0.0056,
+      "f1_delta_ci_high": 0.0516,
+      "significant": false,
+      "direction": "A>B"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "XGBoost",
+      "f1_delta_point": 0.0375,
+      "f1_delta_ci_low": 0.0096,
+      "f1_delta_ci_high": 0.0655,
+      "significant": true,
+      "direction": "A>B"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "SMI",
+      "f1_delta_point": -0.0236,
+      "f1_delta_ci_low": -0.0624,
+      "f1_delta_ci_high": 0.015,
+      "significant": false,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "BanglaBERT",
+      "f1_delta_point": -0.0941,
+      "f1_delta_ci_low": -0.1234,
+      "f1_delta_ci_high": -0.0665,
+      "significant": true,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "XGBoost",
+      "f1_delta_point": 0.0142,
+      "f1_delta_ci_low": -0.0182,
+      "f1_delta_ci_high": 0.0461,
+      "significant": false,
+      "direction": "A>B"
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "SMI",
+      "f1_delta_point": -0.0469,
+      "f1_delta_ci_low": -0.0851,
+      "f1_delta_ci_high": -0.0088,
+      "significant": true,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "BanglaBERT",
+      "f1_delta_point": -0.1175,
+      "f1_delta_ci_low": -0.1494,
+      "f1_delta_ci_high": -0.0858,
+      "significant": true,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "XGBoost",
+      "model_b": "SMI",
+      "f1_delta_point": -0.0611,
+      "f1_delta_ci_low": -0.1024,
+      "f1_delta_ci_high": -0.0214,
+      "significant": true,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "XGBoost",
+      "model_b": "BanglaBERT",
+      "f1_delta_point": -0.1317,
+      "f1_delta_ci_low": -0.1641,
+      "f1_delta_ci_high": -0.101,
+      "significant": true,
+      "direction": "A<B"
+    },
+    {
+      "model_a": "SMI",
+      "model_b": "BanglaBERT",
+      "f1_delta_point": -0.0706,
+      "f1_delta_ci_low": -0.1024,
+      "f1_delta_ci_high": -0.04,
+      "significant": true,
+      "direction": "A<B"
+    }
+  ],
+  "wilcoxon_tests": [
+    {
+      "model_a": "LogReg",
+      "model_b": "RandomForest",
+      "f1_a_mean": 0.7781,
+      "f1_b_mean": 0.7886,
+      "f1_diff_mean": -0.0105,
+      "statistic": 5.0,
+      "p_value": 0.625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "LinearSVM",
+      "f1_a_mean": 0.7781,
+      "f1_b_mean": 0.7651,
+      "f1_diff_mean": 0.0131,
+      "statistic": 4.0,
+      "p_value": 0.4375,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "XGBoost",
+      "f1_a_mean": 0.7781,
+      "f1_b_mean": 0.7504,
+      "f1_diff_mean": 0.0277,
+      "statistic": 3.0,
+      "p_value": 0.3125,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "SMI",
+      "f1_a_mean": 0.7781,
+      "f1_b_mean": 0.8109,
+      "f1_diff_mean": -0.0327,
+      "statistic": 0.0,
+      "p_value": 0.0625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "LogReg",
+      "model_b": "BanglaBERT",
+      "f1_a_mean": 0.7781,
+      "f1_b_mean": 0.8831,
+      "f1_diff_mean": -0.105,
+      "statistic": 0.0,
+      "p_value": 0.0625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "LinearSVM",
+      "f1_a_mean": 0.7886,
+      "f1_b_mean": 0.7651,
+      "f1_diff_mean": 0.0236,
+      "statistic": 1.0,
+      "p_value": 0.125,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "XGBoost",
+      "f1_a_mean": 0.7886,
+      "f1_b_mean": 0.7504,
+      "f1_diff_mean": 0.0382,
+      "statistic": 1.0,
+      "p_value": 0.125,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "SMI",
+      "f1_a_mean": 0.7886,
+      "f1_b_mean": 0.8109,
+      "f1_diff_mean": -0.0223,
+      "statistic": 5.0,
+      "p_value": 0.625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "RandomForest",
+      "model_b": "BanglaBERT",
+      "f1_a_mean": 0.7886,
+      "f1_b_mean": 0.8831,
+      "f1_diff_mean": -0.0945,
+      "statistic": 0.0,
+      "p_value": 0.0625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "XGBoost",
+      "f1_a_mean": 0.7651,
+      "f1_b_mean": 0.7504,
+      "f1_diff_mean": 0.0146,
+      "statistic": 2.0,
+      "p_value": 0.1875,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "SMI",
+      "f1_a_mean": 0.7651,
+      "f1_b_mean": 0.8109,
+      "f1_diff_mean": -0.0458,
+      "statistic": 1.0,
+      "p_value": 0.125,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "LinearSVM",
+      "model_b": "BanglaBERT",
+      "f1_a_mean": 0.7651,
+      "f1_b_mean": 0.8831,
+      "f1_diff_mean": -0.118,
+      "statistic": 0.0,
+      "p_value": 0.0625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "XGBoost",
+      "model_b": "SMI",
+      "f1_a_mean": 0.7504,
+      "f1_b_mean": 0.8109,
+      "f1_diff_mean": -0.0605,
+      "statistic": 0.0,
+      "p_value": 0.0625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "XGBoost",
+      "model_b": "BanglaBERT",
+      "f1_a_mean": 0.7504,
+      "f1_b_mean": 0.8831,
+      "f1_diff_mean": -0.1327,
+      "statistic": 0.0,
+      "p_value": 0.0625,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    },
+    {
+      "model_a": "SMI",
+      "model_b": "BanglaBERT",
+      "f1_a_mean": 0.8109,
+      "f1_b_mean": 0.8831,
+      "f1_diff_mean": -0.0722,
+      "statistic": 1.0,
+      "p_value": 0.125,
+      "significant": false,
+      "interpretation": "Not significant (p>=0.05)",
+      "warning": ""
+    }
+  ],
+  "llm_multiseed_ttest": {
+    "model": "Qwen2.5-7B-Instruct",
+    "n_seeds_successful": 3,
+    "seeds_successful": [
+      42,
+      7,
+      2024
+    ],
+    "f1_per_seed": [
+      0.0506,
+      0.0506,
+      0.05
+    ],
+    "f1_mean": 0.0504,
+    "f1_std": 0.0002828427124746173,
+    "ttest_vs_zero": {
+      "t_statistic": 252.00000000000153,
+      "p_value": 1.5746667612442666e-05,
+      "significant": true,
+      "interpretation": "LLM F1 significantly different from 0 (majority baseline)."
+    },
+    "ttest_vs_banglabert": {
+      "banglabert_f1": 0.8831,
+      "t_statistic": -4163.5000000000255,
+      "p_value": 5.768764691871824e-08,
+      "significant": true,
+      "interpretation": "LLM F1 significantly different from BanglaBERT F1 (catastrophic underperformance)."
+    },
+    "deterministic_failure_note": "The 3-seed F1 std = 0.0003 means the LLM failure is highly stable across seeds — the model has effectively learned a single (wrong) behavior. The multi-seed variance estimate collapses to near-zero, which inflates the t-statistic against BanglaBERT. While the test is statistically significant, the practical interpretation is that the LLM is not just worse on average, it is worse in a tightly-clustered way across all 3 seeds."
+  },
+  "llm_limitation": "LLM predictions are only available at aggregate level (154 test articles per seed). We use bootstrap CI / t-test for LLM comparisons; McNemar is not possible because there is no common per-article prediction file across LLM seeds or between LLMs and the 766-article gold-standard models.",
+  "key_findings": [
+    "BanglaBERT significantly outperforms LogReg (McNemar p=6.47e-11, discordant=132 pairs).",
+    "BanglaBERT significantly outperforms RandomForest (McNemar p=8.44e-11, discordant=120 pairs).",
+    "BanglaBERT significantly outperforms LinearSVM (McNemar p=1.04e-13, discordant=140 pairs).",
+    "BanglaBERT significantly outperforms XGBoost (McNemar p=4.69e-16, discordant=151 pairs).",
+    "BanglaBERT significantly outperforms SMI (McNemar p=1.19e-04, discordant=133 pairs).",
+    "SMI significantly outperforms LogReg (McNemar p=0.0330).",
+    "SMI vs RandomForest: NOT significant (McNemar p=0.0790).",
+    "SMI significantly outperforms LinearSVM (McNemar p=0.0033).",
+    "SMI significantly outperforms XGBoost (McNemar p=0.0005).",
+    "Qwen-7B (3 seeds, F1=0.0504±0.0003) is significantly worse than BanglaBERT (F1=0.883): t-test p=5.77e-08.",
+    "LLM multi-seed F1 std = 0.0003 — the failure is highly stable across the 3 successful seeds (a larger seed budget would be needed to confirm determinism)."
+  ],
+  "note": "Statistical significance tests for all model comparisons in the Swarabyanjan benchmark. McNemar exact test on 766-article paired predictions; bootstrap CI on F1 and pairwise F1 differences; Wilcoxon signed-rank on 5-fold CV per-fold F1; one-sample t-test on 3-seed LLM F1 distribution. All randomness controlled by SEED=42. BanglaBERT per-article predictions loaded from banglabert_clean_predictions.csv (real NB1 output). McNemar tests on 766 paired predictions are exact.",
+  "date_generated": "2026-07-21"
+}

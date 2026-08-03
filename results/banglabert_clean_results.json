@@ -1,0 +1,21 @@
+{
+  "model": "csebuetnlp/banglabert_large",
+  "cv_folds": 5,
+  "gold_samples": 766,
+  "yellow_samples": 383,
+  "non_yellow_samples": 383,
+  "mean_accuracy": 0.8798573975044564,
+  "std_accuracy": 0.02849077476599596,
+  "mean_precision": 0.8643768002694235,
+  "std_precision": 0.04148967768546566,
+  "mean_recall": 0.9034176349965823,
+  "std_recall": 0.014687085095942569,
+  "mean_f1": 0.8830860196713856,
+  "std_f1": 0.024866972820187974,
+  "mean_kappa": 0.7596676067298709,
+  "std_kappa": 0.057076229980495774,
+  "mean_mcc": 0.7611658126194671,
+  "std_mcc": 0.05513278167431509,
+  "mean_auc": 0.9252163762416667,
+  "std_auc": 0.015031051643692285
+}

@@ -1,0 +1,16 @@
+Model,Accuracy,Precision,Recall,F1,Kappa,Type
+BanglaBERT Large (5-fold CV),0.8799±0.0285,0.8644±0.0415,0.9034±0.0147,0.8831±0.0249,0.7597±0.0571,Fine-tuned
+SMI Annotation (5-fold CV),0.8199±0.0503,0.8551,0.7702,0.8091±0.0564,0.6397,Rule-based Annotation Algorithm
+SMI Annotation (4234 non-gold out-of-sample),0.5239,0.4172,0.1968,0.2674,-0.0218,Rule-based Annotation Algorithm (true OOS)
+Random Forest,0.7859±0.0127,0.7814±0.0270,0.7963±0.0397,0.7879±0.0146,0.5717±0.0254,TF-IDF Classical
+Logistic Regression,0.7820±0.0402,0.7926±0.0344,0.7653±0.0766,0.7771±0.0466,0.5641±0.0805,TF-IDF Classical
+Linear SVM,0.7663±0.0193,0.7744±0.0322,0.7548±0.0347,0.7636±0.0175,0.5327±0.0384,TF-IDF Classical
+XGBoost,0.7546±0.0101,0.7602±0.0257,0.7469±0.0429,0.7524±0.0126,0.5092±0.0201,TF-IDF Classical
+"Qwen2.5-7B-Instruct (QLoRA, single seed=42)",0.5195,1.0000,0.0390,0.0750,0.0390,QLoRA Fine-tuned
+"Qwen2.5-7B-Instruct (QLoRA, multi-seed n=3)",0.5108±0.0038,0.8889±0.1924,0.0260±0.0000,0.0504±0.0003,0.0217±0.0075,QLoRA Fine-tuned (multi-seed)
+Gemma-2-2B-it (QLoRA),0.5130,1.0000,0.0260,0.0506,0.0260,QLoRA Fine-tuned
+Phi-3-mini-4k (QLoRA),0.5130,1.0000,0.0260,0.0506,0.0260,QLoRA Fine-tuned
+Llama-3.1-8B-Instruct (QLoRA),0.5130,1.0000,0.0260,0.0506,0.0260,QLoRA Fine-tuned
+Gemma-2-9B-it (QLoRA),0.5130,1.0000,0.0260,0.0506,0.0260,QLoRA Fine-tuned
+Qwen2.5-3B-Instruct (QLoRA),0.5065,0.6667,0.0260,0.0500,0.0130,QLoRA Fine-tuned
+Majority Baseline,0.5000,0.0000,0.0000,0.0000,0.0000,Baseline

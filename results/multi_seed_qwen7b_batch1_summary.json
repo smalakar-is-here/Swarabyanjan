@@ -1,0 +1,76 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "batch": 1,
+  "n_seeds_in_batch": 3,
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "total_seeds_planned": 5,
+  "remaining_seeds": [
+    7,
+    99
+  ],
+  "n_successful": 2,
+  "f1_mean": 0.0503,
+  "f1_std": 0.00042426406871192595,
+  "accuracy_mean": 0.5097499999999999,
+  "accuracy_std": 0.0045961940777126025,
+  "precision_mean": 0.83335,
+  "recall_mean": 0.026,
+  "kappa_mean": 0.0195,
+  "mcc_mean": 0.08085,
+  "per_seed_results": [
+    {
+      "Model": "Qwen2.5-7B-Instruct",
+      "Accuracy": 0.513,
+      "Precision": 1.0,
+      "Recall": 0.026,
+      "F1": 0.0506,
+      "Kappa": 0.026,
+      "MCC": 0.1147,
+      "TP": 2,
+      "FP": 0,
+      "FN": 75,
+      "TN": 77,
+      "Unparseable": 151,
+      "Parseable_Pct": 1.9,
+      "Train_Min": 151.6,
+      "Eval_Min": 2.0,
+      "Source": "kaggle",
+      "Total_Min": 154.2,
+      "MAX_SEQ_LEN": 320,
+      "BATCH_SIZE": 1,
+      "seed": 42
+    },
+    {
+      "seed": 123,
+      "error": "CUDA out of memory. Tried to allocate 2.03 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.93 GiB is free. Including non-PyTorch memory, this process has 12.63 GiB memory in use. Of the allocated memory 12.40 GiB is allocated by PyTorch, and 92.21 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+    },
+    {
+      "Model": "Qwen2.5-7B-Instruct",
+      "Accuracy": 0.5065,
+      "Precision": 0.6667,
+      "Recall": 0.026,
+      "F1": 0.05,
+      "Kappa": 0.013,
+      "MCC": 0.047,
+      "TP": 2,
+      "FP": 1,
+      "FN": 75,
+      "TN": 76,
+      "Unparseable": 148,
+      "Parseable_Pct": 3.9,
+      "Train_Min": 151.6,
+      "Eval_Min": 2.0,
+      "Source": "kaggle",
+      "Total_Min": 153.9,
+      "MAX_SEQ_LEN": 320,
+      "BATCH_SIZE": 1,
+      "seed": 2024
+    }
+  ],
+  "results_csv": "/kaggle/working/multi_seed_qwen7b_batch1_results.csv",
+  "note": "Batch 1 of 2 of multi-seed evaluation to estimate variance of QLoRA fine-tuning on Qwen2.5-7B-Instruct for Bengali yellow journalism detection. Batch 1 covers seeds [42, 123, 2024]; Batch 2 (NB9b) covers seeds [7, 99]. Run NB9c to aggregate both batches into the final 5-seed mean±std. Split because the full 5-seed run (~13h) exceeds Kaggle's 12-hour commit limit. Addresses reviewer concern about single-seed evaluation in NB5."
+}

@@ -1,0 +1,68 @@
+Creative Commons Attribution 4.0 International (CC-BY-4.0)
+==========================================================
+
+This license applies to the following dataset and annotation artifacts:
+
+- `data/Swarabyanjan_BEST_BALANCED_1to1.csv`
+- `data/smi_annotated_5000.csv`
+- `data/smi_criteria_scores_5000.csv`
+- `data/banglabert_clean_predictions.csv`
+- `results/smi_weights.json`
+- `results/smi_annotation_results.json`
+
+The source code in this repository is governed by the MIT License (see `LICENSE`).
+
+Summary
+-------
+
+You are free to:
+
+- **Share** — copy and redistribute the material in any medium or format for
+  any purpose, even commercially.
+- **Adapt** — remix, transform, and build upon the material for any purpose,
+  even commercially.
+
+The licensor cannot revoke these freedoms as long as you follow the license
+terms.
+
+Under the following terms:
+
+- **Attribution** — You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made. You may do so in any reasonable
+  manner, but not in any way that suggests the licensor endorses you or your
+  use.
+
+  Suggested citation: Malakar, S., Das, A., & Ohidujjaman, Dr. (2026).
+  *Swarabyanjan: A Bengali Yellow Journalism Detection Benchmark.*
+  https://github.com/swarabyanjan/swarabyanjan
+
+- **No additional restrictions** — You may not apply legal terms or
+  technological measures that legally restrict others from doing anything the
+  license permits.
+
+Full Legal Text
+---------------
+
+The full text of the Creative Commons Attribution 4.0 International License is
+available at: https://creativecommons.org/licenses/by/4.0/legalcode
+
+## Fair Use Rationale for News Article Text
+
+The `headline` and `body_text` columns in `data/Swarabyanjan_BEST_BALANCED_1to1.csv` 
+and `data/smi_annotated_5000.csv` contain text sourced from Bengali news outlets. 
+This text is included for academic research purposes under fair use / transformative 
+use principles:
+
+1. **Purpose:** Non-commercial academic research in computational linguistics and 
+   journalism studies.
+2. **Nature:** The source material is factual news reporting (not creative fiction).
+3. **Amount:** Articles are used in full for NLP analysis but are not redistributed 
+   for consumption.
+4. **Effect:** This dataset does not substitute for the original news sources; 
+   it enables computational analysis that was not possible with the originals.
+
+Researchers using this dataset for commercial purposes must obtain their own 
+licensing agreements with the original news outlets.
+
+If you are a copyright holder and wish to have your content removed, please 
+open an issue on the GitHub repository.

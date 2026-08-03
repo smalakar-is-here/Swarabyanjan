@@ -1,0 +1,308 @@
+{
+  "notebook": "NB14_BanglaBERT_Error_Analysis",
+  "dataset": "Swarabyanjan_Gold_Balanced_766.csv",
+  "n_articles": 766,
+  "n_yellow": 383,
+  "n_non_yellow": 383,
+  "seed": 42,
+  "pred_source": "csv",
+  "pred_csv": "banglabert_clean_predictions.csv",
+  "overall_metrics": {
+    "accuracy": 0.8798955613577023,
+    "precision": 0.8628428927680798,
+    "recall": 0.9033942558746736,
+    "f1": 0.8826530612244898,
+    "kappa": 0.7597911227154047,
+    "mcc": 0.7606316113563661
+  },
+  "total_errors": 92,
+  "false_positives": 55,
+  "false_negatives": 37,
+  "error_rate": 0.12010443864229765,
+  "error_by_confidence": [
+    {
+      "Confidence": "H",
+      "n": 376,
+      "Errors": 37,
+      "Error Rate": 0.09840425531914894,
+      "F1": 0.725925925925926,
+      "Precision": 0.5764705882352941,
+      "Recall": 0.98
+    },
+    {
+      "Confidence": "M",
+      "n": 328,
+      "Errors": 48,
+      "Error Rate": 0.14634146341463414,
+      "F1": 0.9097744360902256,
+      "Precision": 0.9307692307692308,
+      "Recall": 0.8897058823529411
+    },
+    {
+      "Confidence": "L",
+      "n": 62,
+      "Errors": 7,
+      "Error Rate": 0.11290322580645161,
+      "F1": 0.9401709401709402,
+      "Precision": 0.9821428571428571,
+      "Recall": 0.9016393442622951
+    }
+  ],
+  "error_by_batch": [
+    {
+      "Batch": "corpus_expansion_5000",
+      "n": 649,
+      "Errors": 74,
+      "Error Rate": 0.1140215716486903,
+      "F1": 0.892128279883382
+    },
+    {
+      "Batch": "v17_reused",
+      "n": 48,
+      "Errors": 10,
+      "Error Rate": 0.20833333333333334,
+      "F1": 0.7619047619047619
+    },
+    {
+      "Batch": "new_low_w0_pany",
+      "n": 19,
+      "Errors": 3,
+      "Error Rate": 0.15789473684210525,
+      "F1": 0.8235294117647058
+    },
+    {
+      "Batch": "new_mid_w0_p0",
+      "n": 16,
+      "Errors": 3,
+      "Error Rate": 0.1875,
+      "F1": 0.7272727272727273
+    },
+    {
+      "Batch": "new_mid_w1_p1",
+      "n": 14,
+      "Errors": 1,
+      "Error Rate": 0.07142857142857142,
+      "F1": 0.8888888888888888
+    },
+    {
+      "Batch": "new_high_w1_pany",
+      "n": 10,
+      "Errors": 0,
+      "Error Rate": 0.0,
+      "F1": 1.0
+    },
+    {
+      "Batch": "new_mid_w1_p0",
+      "n": 10,
+      "Errors": 1,
+      "Error Rate": 0.1,
+      "F1": 0.9333333333333333
+    }
+  ],
+  "error_by_length_bin": [
+    {
+      "Length Bin": "0-500",
+      "n": 58,
+      "Errors": 5,
+      "Error Rate": 0.08620689655172414,
+      "F1": 0.9122807017543859
+    },
+    {
+      "Length Bin": "500-1K",
+      "n": 174,
+      "Errors": 20,
+      "Error Rate": 0.11494252873563218,
+      "F1": 0.8780487804878049
+    },
+    {
+      "Length Bin": "1K-2K",
+      "n": 353,
+      "Errors": 44,
+      "Error Rate": 0.12464589235127478,
+      "F1": 0.8810810810810811
+    },
+    {
+      "Length Bin": "2K-4K",
+      "n": 141,
+      "Errors": 14,
+      "Error Rate": 0.09929078014184398,
+      "F1": 0.9078947368421053
+    },
+    {
+      "Length Bin": "4K+",
+      "n": 40,
+      "Errors": 9,
+      "Error Rate": 0.225,
+      "F1": 0.7804878048780488
+    }
+  ],
+  "error_correlation_with_smi": [
+    {
+      "Criterion": "C1",
+      "Mean (Correct)": 0.10356083086053414,
+      "Mean (Errors)": 0.08260869565217391,
+      "Diff (Err-Cor)": -0.02095213520836023,
+      "t-stat": 1.2203116487466255,
+      "p-value": 0.2247530211891101,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.02095213520836023
+    },
+    {
+      "Criterion": "C2",
+      "Mean (Correct)": 0.01649391691394659,
+      "Mean (Errors)": 0.01032608695652174,
+      "Diff (Err-Cor)": -0.006167829957424849,
+      "t-stat": 1.1186843087192802,
+      "p-value": 0.26467383935304184,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.006167829957424849
+    },
+    {
+      "Criterion": "C3",
+      "Mean (Correct)": 0.05493427299703264,
+      "Mean (Errors)": 0.05187391304347826,
+      "Diff (Err-Cor)": -0.00306035995355438,
+      "t-stat": 0.2006246681508855,
+      "p-value": 0.8413077524062884,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.00306035995355438
+    },
+    {
+      "Criterion": "C4",
+      "Mean (Correct)": 0.47359050445103856,
+      "Mean (Errors)": 0.5228260869565217,
+      "Diff (Err-Cor)": 0.0492355825054831,
+      "t-stat": -1.3165819069363136,
+      "p-value": 0.19050069000430528,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.0492355825054831
+    },
+    {
+      "Criterion": "C5",
+      "Mean (Correct)": 0.15233412462908014,
+      "Mean (Errors)": 0.14649565217391305,
+      "Diff (Err-Cor)": -0.005838472455167082,
+      "t-stat": 0.21432443248351882,
+      "p-value": 0.8306670263089564,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.005838472455167082
+    },
+    {
+      "Criterion": "C6",
+      "Mean (Correct)": 0.2420838278931751,
+      "Mean (Errors)": 0.1983663043478261,
+      "Diff (Err-Cor)": -0.043717523545348996,
+      "t-stat": 1.2135949646857422,
+      "p-value": 0.22717600423914092,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.043717523545348996
+    },
+    {
+      "Criterion": "C7",
+      "Mean (Correct)": 0.11540548961424332,
+      "Mean (Errors)": 0.10501304347826088,
+      "Diff (Err-Cor)": -0.010392446135982447,
+      "t-stat": 0.3375271716874227,
+      "p-value": 0.736316705072277,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.010392446135982447
+    },
+    {
+      "Criterion": "C8",
+      "Mean (Correct)": 0.20299451038575672,
+      "Mean (Errors)": 0.20491739130434783,
+      "Diff (Err-Cor)": 0.0019228809185911078,
+      "t-stat": -0.055021486068345095,
+      "p-value": 0.956215909534513,
+      "Significant (p<0.05)": "no",
+      "abs_diff": 0.0019228809185911078
+    }
+  ],
+  "calibration_metrics": {
+    "brier_score": 0.10710150069070369,
+    "ece": 0.07229975208046777,
+    "mce": 0.7553133219480515,
+    "quality": "moderately calibrated",
+    "reliability_bins": [
+      {
+        "bin_lo": 0.0,
+        "bin_hi": 0.1,
+        "n": 341,
+        "mean_prob": 0.02895584630935593,
+        "frac_pos": 0.07917888563049853
+      },
+      {
+        "bin_lo": 0.1,
+        "bin_hi": 0.2,
+        "n": 14,
+        "mean_prob": 0.12916020782930507,
+        "frac_pos": 0.2857142857142857
+      },
+      {
+        "bin_lo": 0.2,
+        "bin_hi": 0.30000000000000004,
+        "n": 3,
+        "mean_prob": 0.24468667805194852,
+        "frac_pos": 1.0
+      },
+      {
+        "bin_lo": 0.30000000000000004,
+        "bin_hi": 0.4,
+        "n": 5,
+        "mean_prob": 0.3536265730857849,
+        "frac_pos": 0.4
+      },
+      {
+        "bin_lo": 0.4,
+        "bin_hi": 0.5,
+        "n": 2,
+        "mean_prob": 0.438651978969574,
+        "frac_pos": 0.5
+      },
+      {
+        "bin_lo": 0.5,
+        "bin_hi": 0.6000000000000001,
+        "n": 6,
+        "mean_prob": 0.5658616622289022,
+        "frac_pos": 0.8333333333333334
+      },
+      {
+        "bin_lo": 0.6000000000000001,
+        "bin_hi": 0.7000000000000001,
+        "n": 4,
+        "mean_prob": 0.6553114801645279,
+        "frac_pos": 0.75
+      },
+      {
+        "bin_lo": 0.7000000000000001,
+        "bin_hi": 0.8,
+        "n": 4,
+        "mean_prob": 0.7512451261281967,
+        "frac_pos": 1.0
+      },
+      {
+        "bin_lo": 0.8,
+        "bin_hi": 0.9,
+        "n": 42,
+        "mean_prob": 0.8612851358595348,
+        "frac_pos": 0.8095238095238095
+      },
+      {
+        "bin_lo": 0.9,
+        "bin_hi": 1.0,
+        "n": 345,
+        "mean_prob": 0.9515672873759615,
+        "frac_pos": 0.8695652173913043
+      }
+    ]
+  },
+  "key_findings": [
+    "By annotation confidence: M-confidence articles have the highest error rate (0.146), while H-confidence articles have the lowest (0.098). BanglaBERT mirrors the human-annotation difficulty.",
+    "By corpus batch: 'v17_reused' has the highest error rate (0.208, n=48); corpus_expansion_5000 (n=649) sets the baseline.",
+    "By article length: '4K+' bin has the highest error rate (0.225, n=40). BanglaBERT uses MAX_LEN=512 tokens; very short or truncated articles are harder.",
+    "Error type breakdown: 55 false positives (pred=Yellow, true=Non-yellow) vs 37 false negatives (pred=Non-yellow, true=Yellow). BanglaBERT is more FP-prone.",
+    "SMI criteria correlation: C4 shows the largest mean-score difference between errors and correct predictions (diff=+0.0492, p=0.1905, not significantly different).",
+    "Probability calibration: Brier score=0.1071, ECE=0.0723 — BanglaBERT's probability estimates are moderately calibrated."
+  ],
+  "note": "BanglaBERT error analysis on 766-article gold standard. Predictions loaded from saved CSV (CPU-only) or regenerated via NB1 5-fold CV fallback (GPU). SMI criteria scoring functions copied verbatim from NB8."
+}

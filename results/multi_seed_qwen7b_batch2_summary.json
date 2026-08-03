@@ -1,0 +1,54 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "batch": 2,
+  "n_seeds_in_batch": 2,
+  "seeds": [
+    7,
+    99
+  ],
+  "total_seeds_planned": 5,
+  "previous_seeds": [
+    42,
+    123,
+    2024
+  ],
+  "n_successful": 1,
+  "f1_mean": 0.0506,
+  "f1_std": null,
+  "accuracy_mean": 0.513,
+  "accuracy_std": null,
+  "precision_mean": 1.0,
+  "recall_mean": 0.026,
+  "kappa_mean": 0.026,
+  "mcc_mean": 0.1147,
+  "per_seed_results": [
+    {
+      "Model": "Qwen2.5-7B-Instruct",
+      "Accuracy": 0.513,
+      "Precision": 1.0,
+      "Recall": 0.026,
+      "F1": 0.0506,
+      "Kappa": 0.026,
+      "MCC": 0.1147,
+      "TP": 2,
+      "FP": 0,
+      "FN": 75,
+      "TN": 77,
+      "Unparseable": 149,
+      "Parseable_Pct": 3.2,
+      "Train_Min": 168.8,
+      "Eval_Min": 2.0,
+      "Source": "kaggle",
+      "Total_Min": 171.4,
+      "MAX_SEQ_LEN": 320,
+      "BATCH_SIZE": 1,
+      "seed": 7
+    },
+    {
+      "seed": 99,
+      "error": "CUDA out of memory. Tried to allocate 2.03 GiB. GPU 0 has a total capacity of 14.56 GiB of which 1.83 GiB is free. Including non-PyTorch memory, this process has 12.73 GiB memory in use. Of the allocated memory 12.40 GiB is allocated by PyTorch, and 194.21 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)"
+    }
+  ],
+  "results_csv": "/kaggle/working/multi_seed_qwen7b_batch2_results.csv",
+  "note": "Batch 2 of 2 of multi-seed evaluation to estimate variance of QLoRA fine-tuning on Qwen2.5-7B-Instruct for Bengali yellow journalism detection. Batch 2 covers seeds [7, 99]; Batch 1 (NB9a) covers seeds [42, 123, 2024]. Run NB9c to aggregate both batches into the final 5-seed mean±std. Split because the full 5-seed run (~13h) exceeds Kaggle's 12-hour commit limit. Addresses reviewer concern about single-seed evaluation in NB5."
+}

@@ -1,0 +1,212 @@
+{
+  "baseline_f1_mean": 0.8091324325306019,
+  "baseline_f1_std": 0.0563604030026017,
+  "baseline_accuracy": 0.8199303964009845,
+  "baseline_kappa": 0.639971852324417,
+  "baseline_f1_pooled": 0.8104395604395604,
+  "baseline_f1_per_fold": [
+    0.7361111111111112,
+    0.9078947368421053,
+    0.8163265306122449,
+    0.782608695652174,
+    0.8027210884353742
+  ],
+  "n_articles": 766,
+  "n_yellow": 383,
+  "n_non_yellow": 383,
+  "seed": 42,
+  "n_folds": 5,
+  "drop_one_out": [
+    {
+      "dropped": "C1",
+      "dropped_name": "C1: Sensational Headline",
+      "f1_mean": 0.7078755530823738,
+      "f1_std": 0.08007601065974018,
+      "f1_delta": 0.10125687944822803,
+      "f1_delta_abs": 0.10125687944822803,
+      "accuracy": 0.727289703760292,
+      "kappa": 0.4548403910343947,
+      "f1_pooled": 0.7125171939477304,
+      "interpretation": "Essential"
+    },
+    {
+      "dropped": "C6",
+      "dropped_name": "C6: Entertainment Displacement",
+      "f1_mean": 0.7956434029546612,
+      "f1_std": 0.02424308072824528,
+      "f1_delta": 0.01348902957594067,
+      "f1_delta_abs": 0.01348902957594067,
+      "accuracy": 0.7976657329598504,
+      "kappa": 0.5953790245927291,
+      "f1_pooled": 0.7957839262187089,
+      "interpretation": "Important"
+    },
+    {
+      "dropped": "C3",
+      "dropped_name": "C3: Emotional Arousal",
+      "f1_mean": 0.8017559534628086,
+      "f1_std": 0.0594381456505923,
+      "f1_delta": 0.007376479067793262,
+      "f1_delta_abs": 0.007376479067793262,
+      "accuracy": 0.8134029369323486,
+      "kappa": 0.6269459474029321,
+      "f1_pooled": 0.8033012379642366,
+      "interpretation": "Minor"
+    },
+    {
+      "dropped": "C7",
+      "dropped_name": "C7: Headline-Body Coherence",
+      "f1_mean": 0.8037218771566599,
+      "f1_std": 0.0565117132060672,
+      "f1_delta": 0.005410555373941972,
+      "f1_delta_abs": 0.005410555373941972,
+      "accuracy": 0.8160258042610984,
+      "kappa": 0.6321994050130938,
+      "f1_pooled": 0.8055172413793104,
+      "interpretation": "Minor"
+    },
+    {
+      "dropped": "C2",
+      "dropped_name": "C2: Clickbait",
+      "f1_mean": 0.8039660716739249,
+      "f1_std": 0.05935880948539484,
+      "f1_delta": 0.005166360856676988,
+      "f1_delta_abs": 0.005166360856676988,
+      "accuracy": 0.8160173160173159,
+      "kappa": 0.6321485648401982,
+      "f1_pooled": 0.8055172413793104,
+      "interpretation": "Minor"
+    },
+    {
+      "dropped": "C5",
+      "dropped_name": "C5: Speculation",
+      "f1_mean": 0.8066105095907918,
+      "f1_std": 0.041508167183184466,
+      "f1_delta": 0.0025219229398100174,
+      "f1_delta_abs": 0.0025219229398100174,
+      "accuracy": 0.8185892538833714,
+      "kappa": 0.6373097611834211,
+      "f1_pooled": 0.8077455048409405,
+      "interpretation": "Negligible"
+    },
+    {
+      "dropped": "C8",
+      "dropped_name": "C8: Sensitive Topic",
+      "f1_mean": 0.8080292885703152,
+      "f1_std": 0.056262691735351526,
+      "f1_delta": 0.0011031439602866566,
+      "f1_delta_abs": 0.0011031439602866566,
+      "accuracy": 0.8186232068585009,
+      "kappa": 0.63736250372789,
+      "f1_pooled": 0.8093278463648834,
+      "interpretation": "Negligible"
+    },
+    {
+      "dropped": "C4",
+      "dropped_name": "C4: Attribution Gap",
+      "f1_mean": 0.8084548992929225,
+      "f1_std": 0.04835213607646826,
+      "f1_delta": 0.0006775332376793841,
+      "f1_delta_abs": 0.0006775332376793841,
+      "accuracy": 0.8199303964009846,
+      "kappa": 0.639979007774991,
+      "f1_pooled": 0.8093922651933702,
+      "interpretation": "Negligible"
+    }
+  ],
+  "drop_pairs": [
+    {
+      "dropped": [
+        "C1",
+        "C6"
+      ],
+      "f1_mean": 0.6665480944786998,
+      "f1_std": 0.02293311611964897,
+      "f1_delta": 0.14258433805190207,
+      "single_sum": 0.1147459090241687,
+      "synergy": 0.02783842902773337,
+      "accuracy": 0.6710550887021476,
+      "kappa": 0.34220269671813386
+    },
+    {
+      "dropped": [
+        "C1",
+        "C3"
+      ],
+      "f1_mean": 0.7160500758114263,
+      "f1_std": 0.0547452947129796,
+      "f1_delta": 0.09308235671917553,
+      "single_sum": 0.1086333585160213,
+      "synergy": -0.015551001796845765,
+      "accuracy": 0.7337662337662338,
+      "kappa": 0.4678320093323028
+    },
+    {
+      "dropped": [
+        "C1",
+        "C7"
+      ],
+      "f1_mean": 0.7154928460242511,
+      "f1_std": 0.06557203419890649,
+      "f1_delta": 0.09363958650635074,
+      "single_sum": 0.10666743482217,
+      "synergy": -0.013027848315819268,
+      "accuracy": 0.7324760207113149,
+      "kappa": 0.46513595934477225
+    },
+    {
+      "dropped": [
+        "C6",
+        "C3"
+      ],
+      "f1_mean": 0.797296407786474,
+      "f1_std": 0.02389705429687229,
+      "f1_delta": 0.011836024744127815,
+      "single_sum": 0.020865508643733932,
+      "synergy": -0.009029483899606117,
+      "accuracy": 0.8002716238010354,
+      "kappa": 0.6005839958896927
+    },
+    {
+      "dropped": [
+        "C6",
+        "C7"
+      ],
+      "f1_mean": 0.7920219936305026,
+      "f1_std": 0.022181008234871753,
+      "f1_delta": 0.017110438900099223,
+      "single_sum": 0.018899584949882642,
+      "synergy": -0.0017891460497834188,
+      "accuracy": 0.7937696290637467,
+      "kappa": 0.5875912907841215
+    },
+    {
+      "dropped": [
+        "C3",
+        "C7"
+      ],
+      "f1_mean": 0.7992483823604337,
+      "f1_std": 0.05651617088137526,
+      "f1_delta": 0.009884050170168135,
+      "single_sum": 0.012787034441735234,
+      "synergy": -0.0029029842715670995,
+      "accuracy": 0.8121042356336472,
+      "kappa": 0.6243565904364773
+    }
+  ],
+  "learned_weights": {
+    "C1": 6.609974712399368,
+    "C2": 1.1705749552566838,
+    "C3": 0.4006483074502242,
+    "C4": 2.0237244909506216,
+    "C5": 1.0842792635802296,
+    "C6": 2.213656157879467,
+    "C7": 0.6150790759804787,
+    "C8": -0.0755169527115126
+  },
+  "learned_bias": -2.259462223027212,
+  "published_weights_source": "re-learned in this notebook",
+  "spearman_corr_weight_vs_delta": 0.4285714285714286,
+  "spearman_pvalue": 0.2894032248467901,
+  "note": "Drop-one-out ablation of the 8 SMI criteria. Baseline is all 8 criteria (5-fold CV F1=0.8091 ± 0.0564, matches NB8). For each criterion dropped, a new logistic regression is trained on the remaining 7 criteria with the same SEED=42, N_FOLDS=5, and LogisticRegression(C=1.0, max_iter=2000, class_weight=balanced, random_state=42) hyperparameters as NB8. Positive F1_delta means dropping the criterion hurts performance (criterion is informative). Drop-pairs ablates all 6 pairs of the top-4 most important criteria (by |F1_delta|). Synergy = pair_delta - sum_of_single_deltas (positive = complementary, negative = redundant). Spearman correlation between |weight| and |F1_delta| measures consistency of ablation results with the learned logistic regression weights. Added 2026-07-21 for Q1 publication readiness."
+}

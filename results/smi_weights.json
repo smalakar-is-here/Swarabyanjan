@@ -1,0 +1,14 @@
+{
+  "weights": {
+    "C1: Sensational Headline": 6.609974712399368,
+    "C2: Clickbait": 1.1705749552566838,
+    "C3: Emotional Arousal": 0.4006483074502242,
+    "C4: Attribution Gap": 2.0237244909506216,
+    "C5: Speculation": 1.0842792635802296,
+    "C6: Entertainment Displacement": 2.213656157879467,
+    "C7: Headline-Body Coherence": 0.6150790759804787,
+    "C8: Sensitive Topic": -0.0755169527115126
+  },
+  "bias": -2.259462223027212,
+  "threshold": 0.41683289233841836
+}

@@ -1,0 +1,184 @@
+% CITATION.bib — Bibliography for the Swarabyanjan project.
+%
+% This file collects BibTeX entries for all third-party models, methods,
+% and statistical tests referenced in the Swarabyanjan Bengali yellow
+% journalism detection benchmark. Please cite the appropriate works when
+% using this repository or its dataset.
+
+% =============================================================================
+% 1. BanglaBERT — Bengali language model used as the BanglaBERT Large
+%    fine-tuned transformer baseline (NB1).
+% =============================================================================
+@article{bhattacharjee2022banglabert,
+  author    = {Bhattacharjee, Abhibhave and Akhtar, Tahmid Hasan and Samin, Kazi and Hasan, Masum Hasan and Rahman, M. Saifur and Shahriyar, Syed and Kabir, A. S. M. and Rahman, Wasi Ahmad},
+  title     = {{BanglaBERT}: A Language Model for Bengali},
+  journal   = {arXiv preprint arXiv:2109.06053},
+  year      = {2022},
+  eprint    = {2109.06053},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2109.06053}
+}
+
+% =============================================================================
+% 2. QLoRA — quantized low-rank adaptation method used for fine-tuning
+%    all 6 general-purpose LLMs (NB2–NB7).
+% =============================================================================
+@inproceedings{dettmers2023qlora,
+  author    = {Dettmers, Tim and Pagnoni, Artidoro and Holtzman, Ari and Zettlemoyer, Luke},
+  title     = {{QLoRA}: Efficient Finetuning of Quantized {LLMs}},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023},
+  eprint    = {2305.14314},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url       = {https://arxiv.org/abs/2305.14314}
+}
+
+% =============================================================================
+% 3. LoRA — low-rank adaptation, foundational method underlying QLoRA.
+% =============================================================================
+@inproceedings{hu2022lora,
+  author    = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  title     = {{LoRA}: Low-Rank Adaptation of Large Language Models},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022},
+  eprint    = {2106.09685},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2106.09685}
+}
+
+% =============================================================================
+% 4. Gemma 2 — open language models from Google, used as
+%    `google/gemma-2-2b-it` and `google/gemma-2-9b-it` (NB2, NB7).
+% =============================================================================
+@article{google2024gemma2,
+  author    = {{Gemma Team, Google}},
+  title     = {{Gemma 2}: Improving Open Language Models at a Practical Size},
+  journal   = {arXiv preprint arXiv:2408.00118},
+  year      = {2024},
+  eprint    = {2408.00118},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2408.00118}
+}
+
+% =============================================================================
+% 5. Qwen2.5 — Qwen Team technical report; used as
+%    `Qwen/Qwen2.5-3B-Instruct` (NB3) and `Qwen/Qwen2.5-7B-Instruct`
+%    (NB5, NB9a/b/c multi-seed).
+% =============================================================================
+@article{qwen2024qwen25,
+  author    = {{Qwen Team}},
+  title     = {{Qwen2.5} Technical Report},
+  journal   = {arXiv preprint arXiv:2412.15115},
+  year      = {2024},
+  eprint    = {2412.15115},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2412.15115}
+}
+
+% =============================================================================
+% 6. Phi-3 — Microsoft technical report; used as
+%    `microsoft/Phi-3-mini-4k-instruct` (NB4).
+% =============================================================================
+@article{microsoft2024phi3,
+  author    = {{Microsoft Phi Team}},
+  title     = {{Phi-3} Technical Report},
+  journal   = {arXiv preprint arXiv:2404.14219},
+  year      = {2024},
+  eprint    = {2404.14219},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2404.14219}
+}
+
+% =============================================================================
+% 7. Llama 3.1 — Meta technical report; used as
+%    `meta-llama/Meta-Llama-3.1-8B-Instruct` (NB6).
+% =============================================================================
+@article{meta2024llama31,
+  author    = {{Meta AI}},
+  title     = {The {Llama 3.1} Herd of Models},
+  journal   = {arXiv preprint arXiv:2407.21783},
+  year      = {2024},
+  eprint    = {2407.21783},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  url       = {https://arxiv.org/abs/2407.21783}
+}
+
+% =============================================================================
+% 8. Snorkel — weak-supervision framework cited as theoretical
+%    motivation for the SMI automated-annotation algorithm (NB8).
+% =============================================================================
+@inproceedings{ratner2017snorkel,
+  author    = {Ratner, Alexander J. and De Sa, Christopher M. and Wu, Sen and Selsam, Daniel and R{\'e}, Christopher},
+  title     = {Data Programming: Creating Large Training Sets, Quickly},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2016},
+  note      = {System reference: {Snorkel}: Rapid Training Data Creation with Weak Supervision, {VLDB} 2017.},
+  url       = {https://www.snorkel.org/}
+}
+
+@inproceedings{ratner2017snorkel_vldb,
+  author    = {Ratner, Alexander J. and Bach, Stephen H. and Ehrenberg, Henry R. and Fries, Jason A. and Wu, Sen and R{\'e}, Christopher},
+  title     = {{Snorkel}: Rapid Training Data Creation with Weak Supervision},
+  booktitle = {Proceedings of the VLDB Endowment (PVLDB)},
+  volume    = {11},
+  number    = {3},
+  pages     = {269--282},
+  year      = {2017},
+  doi       = {10.14778/3157794.3157797},
+  url       = {https://dl.acm.org/doi/10.14778/3157794.3157797}
+}
+
+% =============================================================================
+% 9. McNemar's test — paired nominal-scale significance test used in
+%    NB13 for pairwise model comparisons on the 766-article gold set.
+% =============================================================================
+@article{mcnemar1947note,
+  author    = {McNemar, Quinn},
+  title     = {Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages},
+  journal   = {Psychometrika},
+  volume    = {12},
+  number    = {2},
+  pages     = {153--157},
+  year      = {1947},
+  doi       = {10.1007/BF02295996},
+  url       = {https://link.springer.com/article/10.1007/BF02295996}
+}
+
+% =============================================================================
+% 10. Wilcoxon signed-rank test — non-parametric paired test used in
+%     NB13 on 5-fold CV per-fold F1 scores.
+% =============================================================================
+@article{wilcoxon1945individual,
+  author    = {Wilcoxon, Frank},
+  title     = {Individual Comparisons by Ranking Methods},
+  journal   = {Biometrics Bulletin},
+  volume    = {1},
+  number    = {6},
+  pages     = {80--83},
+  year      = {1945},
+  doi       = {10.2307/3001968},
+  url       = {https://www.jstor.org/stable/3001968}
+}
+
+% =============================================================================
+% 11. ELECTRA — discriminative pre-training objective underlying the
+%     BanglaBERT architecture (replaced masked-LM with replaced-token
+%     detection).
+% =============================================================================
+@inproceedings{clark2020electra,
+  author    = {Clark, Kevin and Luong, Minh-Thang and Le, Quoc V. and Manning, Christopher D.},
+  title     = {{ELECTRA}: Pre-training Text Encoders as Discriminators Rather Than Generators},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2020},
+  eprint    = {2003.10555},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url       = {https://arxiv.org/abs/2003.10555}
+}

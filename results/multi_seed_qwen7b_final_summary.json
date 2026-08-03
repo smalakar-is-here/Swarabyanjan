@@ -1,0 +1,119 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "n_seeds_total": 3,
+  "seeds": [
+    7,
+    42,
+    2024
+  ],
+  "batches": [
+    {
+      "batch": 1,
+      "seeds": [
+        42,
+        123,
+        2024
+      ],
+      "csv": "multi_seed_qwen7b_batch1_results.csv"
+    },
+    {
+      "batch": 2,
+      "seeds": [
+        7,
+        99
+      ],
+      "csv": "multi_seed_qwen7b_batch2_results.csv"
+    }
+  ],
+  "f1_mean": 0.0504,
+  "f1_std": 0.0003464101615137734,
+  "f1_min": 0.05,
+  "f1_max": 0.0506,
+  "accuracy_mean": 0.5108333333333334,
+  "accuracy_std": 0.003752776749732603,
+  "precision_mean": 0.8889,
+  "precision_std": 0.1924308447209023,
+  "recall_mean": 0.026,
+  "recall_std": 0.0,
+  "kappa_mean": 0.021666666666666667,
+  "kappa_std": 0.007505553499465134,
+  "mcc_mean": 0.09213333333333333,
+  "mcc_std": 0.03908661322413766,
+  "per_seed_results": [
+    {
+      "Model": "Qwen2.5-7B-Instruct",
+      "Accuracy": 0.513,
+      "Precision": 1.0,
+      "Recall": 0.026,
+      "F1": 0.0506,
+      "Kappa": 0.026,
+      "MCC": 0.1147,
+      "TP": 2.0,
+      "FP": 0.0,
+      "FN": 75.0,
+      "TN": 77.0,
+      "Unparseable": 149.0,
+      "Parseable_Pct": 3.2,
+      "Train_Min": 168.8,
+      "Eval_Min": 2.0,
+      "Source": "kaggle",
+      "Total_Min": 171.4,
+      "MAX_SEQ_LEN": 320.0,
+      "BATCH_SIZE": 1.0,
+      "seed": 7,
+      "error": null,
+      "batch": 2
+    },
+    {
+      "Model": "Qwen2.5-7B-Instruct",
+      "Accuracy": 0.513,
+      "Precision": 1.0,
+      "Recall": 0.026,
+      "F1": 0.0506,
+      "Kappa": 0.026,
+      "MCC": 0.1147,
+      "TP": 2.0,
+      "FP": 0.0,
+      "FN": 75.0,
+      "TN": 77.0,
+      "Unparseable": 151.0,
+      "Parseable_Pct": 1.9,
+      "Train_Min": 151.6,
+      "Eval_Min": 2.0,
+      "Source": "kaggle",
+      "Total_Min": 154.2,
+      "MAX_SEQ_LEN": 320.0,
+      "BATCH_SIZE": 1.0,
+      "seed": 42,
+      "error": null,
+      "batch": 1
+    },
+    {
+      "Model": "Qwen2.5-7B-Instruct",
+      "Accuracy": 0.5065,
+      "Precision": 0.6667,
+      "Recall": 0.026,
+      "F1": 0.05,
+      "Kappa": 0.013,
+      "MCC": 0.047,
+      "TP": 2.0,
+      "FP": 1.0,
+      "FN": 75.0,
+      "TN": 76.0,
+      "Unparseable": 148.0,
+      "Parseable_Pct": 3.9,
+      "Train_Min": 151.6,
+      "Eval_Min": 2.0,
+      "Source": "kaggle",
+      "Total_Min": 153.9,
+      "MAX_SEQ_LEN": 320.0,
+      "BATCH_SIZE": 1.0,
+      "seed": 2024,
+      "error": null,
+      "batch": 1
+    }
+  ],
+  "nb5_single_seed_f1": 0.075,
+  "nb5_within_1std_of_multiseed": false,
+  "note": "Aggregated from 2 batch runs (NB9a + NB9b) due to Kaggle's 12-hour session limit. Addresses reviewer concern about single-seed LLM evaluation in NB5."
+}
